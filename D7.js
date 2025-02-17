@@ -14,11 +14,23 @@ const StringUpper = function(string1, string2){
 
 }
 
-StringUpper('ccaisocl', 'iao');
+StringUpper('ciao', 'mondo');
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+
+const createArr = function() {
+  let arrTen = [];
+
+  for (let i = 0; i < 10; i++) {  
+    arrTen.push(Math.floor(Math.random() * 101)); 
+  } 
+
+  console.log(arrTen);
+}
+
+createArr();
 
 
 
