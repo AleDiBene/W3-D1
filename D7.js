@@ -36,23 +36,48 @@ createArr();
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
-const Pari = function() {
+let numbers = [5, 12, 23, 7, 34, 89, 2, 56, 78, 90];
 
-  let numbers = [5, 12, 23, 7, 34, 89, 2, 56, 78, 90];
+const Pari = function(numbers) {
+
   let result = numbers.filter(num => num % 2 === 0);
 
   console.log(result);
 }
-Pari()
+
+Pari(numbers)
 
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+const sum = function(numbers){ 
+
+  let result = 0;
+
+numbers.forEach((num)=>{
+  result += num;
+})
+console.log(result);
+}
+
+console.log(sum(numbers))
+
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+const SumArr = function(numbers){
+  let somma = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
+
+  return somma;
+}
+
+console.log( 'arrays sum is ' + SumArr(numbers))
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
