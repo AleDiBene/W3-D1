@@ -32,11 +32,19 @@ const createArr = function() {
 
 createArr();
 
-
-
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+
+const Pari = function() {
+
+  let numbers = [5, 12, 23, 7, 34, 89, 2, 56, 78, 90];
+  let result = numbers.filter(num => num % 2 === 0);
+
+  console.log(result);
+}
+Pari()
+
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
